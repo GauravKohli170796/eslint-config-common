@@ -1,0 +1,14 @@
+{
+    "extends": "./tsconfig.json",
+    "include": [
+      "rules",
+      "test",
+      ".eslintrc.js",
+      "index.ts"
+    ],
+    "exclude": [
+      "node_modules",
+      "lib"
+    ]
+  }
+  

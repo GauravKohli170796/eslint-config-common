@@ -1,0 +1,12 @@
+node_modules
+lib/
+coverage/
+.nyc_output/
+.vscode/
+.idea/
+
+*.bkp
+*.bkp/
+
+**/*.DS_Store
+.env

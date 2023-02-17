@@ -1,0 +1,6 @@
+{
+  "all": true,
+  "include": [
+    "rules/custom-rules/*.ts"
+  ]
+}
