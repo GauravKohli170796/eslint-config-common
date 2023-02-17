@@ -68,7 +68,7 @@ node(ciNode) {
                             -Dsonar.branch.name=${env.BRANCH_NAME} \
                             -Dsonar.sources='.' \
                             -Dsonar.cpd.exclusions='test/**,e2e/**,src/client/entities/**,src/master/entities/**,odc-reports/**' \
-                            -Dsonar.coverage.exclusions='test/**,e2e/**,gulpfile.js,karma.coverage.js,karma.unit.js,webpack.config.js,odc-reports/**' \
+                            -Dsonar.coverage.exclusions='test/**,index.ts,rules/eslint-rules.ts,rules/prettier-rules.ts,rules/typescript-rules.ts,rules/rules.ts,e2e/**,gulpfile.js,karma.coverage.js,karma.unit.js,webpack.config.js,odc-reports/**' \
                             -Dsonar.exclusions='**/node_modules/**,coverage/**,coverage_it/**,e2e/transpiled/**,nlconfig/**,dist/**,.githooks/**,distsrc/**,lib/**,**/UnmappedScenarioPlannerDimensions**,**/VCrossChannelStable**,**/LogDbCleanroomProcessExecutionLog**,odc-reports/**' \
                             -Dsonar.javascript.lcov.reportPaths='coverage/lcov.info' \
                             -Dsonar.sourceEncoding='UTF-8' \
@@ -98,7 +98,7 @@ node(ciNode) {
 
             stage ("Starting cd job") {
             	if(env.BRANCH_NAME == 'master'){
-                	build job: 'cd-' + CONST_SONAR_PROJECT_ID, propagate: false, wait: false
+                	build job: 'cd-' + CONST_SONAR_PROJECT_NAME, propagate: false, wait: false
                 }
             }
 
