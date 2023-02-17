@@ -1,5 +1,5 @@
 def allJob = env.JOB_NAME.tokenize('/') as String[];
-def projectName = allJob[0].replace('cd-', '')
+def projectName = 'eslint-config-measured';
 
 node {
 
@@ -11,7 +11,7 @@ node {
 	stage('build'){
 		sh 'echo "_auth=${NEXUS_AUTH_TOKEN}" >> ./.npmrc'
 		sh 'npm prune'
-		sh 'npm install --only=prod'
+		sh 'npm install'
 		sh 'npm run build:full'
 	}
 
