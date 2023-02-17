@@ -98,7 +98,7 @@ node(ciNode) {
 
             stage ("Starting cd job") {
             	if(env.BRANCH_NAME == 'master'){
-                	build job: 'cd-' + CONST_SONAR_PROJECT_NAME, propagate: false, wait: false
+                	build job: 'cd-' + CONST_SONAR_PROJECT_ID, propagate: false, wait: false
                 }
             }
 

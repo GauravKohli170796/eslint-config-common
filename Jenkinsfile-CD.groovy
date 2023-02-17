@@ -1,4 +1,3 @@
-def allJob = env.JOB_NAME.tokenize('/') as String[];
 def projectName = 'eslint-config-measured';
 
 node {
